@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #FBF5DD;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 900px;
+    height: 80vh;
+    padding: 0 3rem;
+}
+
+.new-game {
+    border-radius: 1em;
+    border-style: none;
+    background-color: #DDA853;
+    padding: 1em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    align-self: flex-start;
+}
+
+.new-game:hover {
+    background-color: orange;
+}
+
+.new-game:active {
+    background-color: #A6CDC6;
+}
+.letters {
+    margin-top: 1em;
+}
+
+.letters button {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    padding: 0.3em;
+    width: 2em;
+}
+
+.row-one {
+    text-align: center;
+    display:flex;
+}
+.row-two {
+    text-align: center;
+    display:flex;
+}
+.row-three {
+    display:flex;
+    justify-content: center;
+}
+
+.word {
+    text-align: center;
+    width: 100%;
+    border-bottom: solid 1px palevioletred;
+    margin-bottom: 1em;
+}
+.word p {
+    font-size: 3em;
+    margin: 0.5em 0;
+    letter-spacing: 0.3em;
+}
+
+.remaining {
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.correct {
+    display: none;
+}

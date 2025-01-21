@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <button class="new-game">New Game</button>
+      <div class="hangman-image"><img src="img/stage6.jpg" /></div>
+      <div class="word">
+        <p></p>
+      </div>
+      <div class="letters keyboard">
+        <div class="row-one">
+          <button name="Q" class="letterButton">Q</button>
+          <button name="W" class="letterButton">W</button>
+          <button name="E" class="letterButton">E</button>
+          <button name="R" class="letterButton">R</button>
+          <button name="T" class="letterButton">T</button>
+          <button name="Y" class="letterButton">Y</button>
+          <button name="U" class="letterButton">U</button>
+          <button name="I" class="letterButton">I</button>
+          <button name="O" class="letterButton">O</button>
+          <button name="P" class="letterButton">P</button>
+          <button name="Å" class="letterButton">Å</button>
+        </div>
+        <div class="row-two">
+          <button name="A" class="letterButton">A</button>
+          <button name="S" class="letterButton">S</button>
+          <button name="D" class="letterButton">D</button>
+          <button name="F" class="letterButton">F</button>
+          <button name="G" class="letterButton">G</button>
+          <button name="H" class="letterButton">H</button>
+          <button name="J" class="letterButton">J</button>
+          <button name="K" class="letterButton">K</button>
+          <button name="L" class="letterButton">L</button>
+          <button name="Ö" class="letterButton">Ö</button>
+          <button name="Ä" class="letterButton">Ä</button>
+        </div>
+        <div class="row-three">
+          <button name="Z" class="letterButton">Z</button>
+          <button name="X" class="letterButton">X</button>
+          <button name="C" class="letterButton">C</button>
+          <button name="V" class="letterButton">V</button>
+          <button name="B" class="letterButton">B</button>
+          <button name="N" class="letterButton">N</button>
+          <button name="M" class="letterButton">M</button>
+        </div>
+      </div>
+      <div class="remaining">
+        <p>Guesses left: <span>6</span>/6</p>
+      </div>
+      <div class="correct">
+        <p>Correct word: <span id="cWord"></span></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
