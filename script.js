@@ -112,7 +112,6 @@ for (let i = 0; i < randomWord.length; i++) {
 const newGameButton = document.querySelector(".new-game");
 newGameButton.addEventListener("click", newGame);
 const correct = document.querySelector(".correct");
-correct.classList.add("hidden");
 correctSpan = document.querySelector("#cWord");
 const image = document.querySelector("img");
 const remaining = document.querySelector(".remaining span");
@@ -148,6 +147,7 @@ function roundLogic() {
       toggleButtons(true);
       correctSpan.innerText = randomWord;
       correct.classList.add("revealed");
+      correct.classList.remove("hidden");
     }
   }
   
@@ -164,6 +164,7 @@ function newGame() {
   remainingGuesses = 6;
   remaining.innerText = remainingGuesses;
   image.src = `img/stage6.jpg`;
+  correct.classList.remove("revealed");
   correct.classList.add("hidden");
   correctSpan.innerText = "";
 }
