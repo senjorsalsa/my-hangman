@@ -134,30 +134,27 @@ function roundLogic() {
     }
     theWord = newWord;
     guessingWordElement.innerText = newWord;
+    if (!theWord.includes("_")) {
+      /* Player won */
+      correct.innerHTML = "<p>Congratulations! You won!</p>";
+    }
   } else {
     remainingGuesses--;
     remaining.innerText = remainingGuesses;
     image.src = `img/stage${remainingGuesses}.jpg`;
     if (remainingGuesses === 0) {
       /* Player lost */
-      for (let button of buttons) {
-        button.disabled = true;
-      }
+      toggleButtons(true);
       correctSpan.innerText = randomWord;
       correct.style.display = "block";
     }
   }
-  if (!theWord.includes("_")) {
-    /* Player won */
-    correct.innerHTML = "<p>Congratulations! You won!</p>";
-  }
+  
 }
 
 function newGame() {
   theWord = "";
-  for (let button of buttons) {
-    button.disabled = false;
-  }
+  toggleButtons(false);
   randomWord = getRandomWord().toUpperCase();
   for (let i = 0; i < randomWord.length; i++) {
     theWord += "_";
@@ -167,4 +164,10 @@ function newGame() {
   remaining.innerText = remainingGuesses;
   image.src = `img/stage6.jpg`;
   correct.style.display = "none";
+}
+
+function toggleButtons(action){
+  for (let button of buttons) {
+    button.disabled = action;
+  }
 }
