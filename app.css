@@ -80,6 +80,5 @@ body {
     font-weight: bold;
 }
 
-.correct {
-    display: none;
-}
+.hidden {display: none;}
+.revealed {display: block;}
