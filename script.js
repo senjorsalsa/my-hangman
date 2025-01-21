@@ -112,6 +112,7 @@ for (let i = 0; i < randomWord.length; i++) {
 const newGameButton = document.querySelector(".new-game");
 newGameButton.addEventListener("click", newGame);
 const correct = document.querySelector(".correct");
+correct.classList.add("hidden");
 correctSpan = document.querySelector("#cWord");
 const image = document.querySelector("img");
 const remaining = document.querySelector(".remaining span");
@@ -146,7 +147,7 @@ function roundLogic() {
       /* Player lost */
       toggleButtons(true);
       correctSpan.innerText = randomWord;
-      correct.style.display = "block";
+      correct.classList.add("revealed");
     }
   }
   
