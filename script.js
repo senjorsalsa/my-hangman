@@ -164,7 +164,7 @@ function newGame() {
   remainingGuesses = 6;
   remaining.innerText = remainingGuesses;
   image.src = `img/stage6.jpg`;
-  correct.style.display = "none";
+  correct.classList.add("hidden");
 }
 
 function toggleButtons(action){
