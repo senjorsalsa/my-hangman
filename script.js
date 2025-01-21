@@ -146,8 +146,7 @@ function roundLogic() {
       /* Player lost */
       toggleButtons(true);
       correctSpan.innerText = randomWord;
-      correct.classList.add("revealed");
-      correct.classList.remove("hidden");
+      correct.classList.toggle("hidden");
     }
   }
   
@@ -164,8 +163,7 @@ function newGame() {
   remainingGuesses = 6;
   remaining.innerText = remainingGuesses;
   image.src = `img/stage6.jpg`;
-  correct.classList.remove("revealed");
-  correct.classList.add("hidden");
+  correct.classList.toggle("hidden");
   correctSpan.innerText = "";
 }
 
